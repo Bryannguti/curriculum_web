@@ -66,6 +66,10 @@ img{
     display: flex;
     flex: 1;
 }
+.pdf embed{
+    width="100%";
+    height="1000px";
+}
 .certificacion h1{
     color: #FFFFFF;
     text-align: center;
@@ -141,49 +145,9 @@ img{
         flex-direction: column;
         text-align: center;
     }
-    .header-txt h1{
-        font-size: 70px;
-    }
-    .about-container{
-        padding: 30px;
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-img{
-        text-align: center;
-    }
-    .about-img img{
-        width: 250px;
-        margin-bottom: 15px;
-    }
-    .butons a{
-        margin: 0 0 10px 0;
-    }
-    .portafolio-container{
-        padding: 30px;
-    }
-    .portafolio-1{
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
-    .portafolio-txt{
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .portafolio-img {
-        order: 2;
-    }
-    .portafolio-img img{
-        width: 250px;
-    }
-    .skills-container{
-        padding: 0 30px 0 30px;
-    }
-    .skills-content{
-        margin-top: 0;
-        grid-template-columns: repeat(2,1fr);
-        gap: 40px;
-        padding: 0 100px;
+    .pdf embed{
+        width="40%";
+        height="100px";
     }
     footer{
         padding: 30px;
