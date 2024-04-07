@@ -11,10 +11,6 @@ body{
     background-color: #101630;
 }
 
-img{
-    max-width: 100%;
-}
-
 .menu {
     position: absolute;
     top: 0;

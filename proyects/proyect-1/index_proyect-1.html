@@ -47,7 +47,7 @@
             <li><a href="#recomendaciones">recomendaciones</a></li>
         </div>
         <div class="dise" id="dise">
-            <h2>DISEÑO</h2>
+            <h2>DISEÑO DEL HARDWARE</h2>
             <p>
                 Para la realizar pruebas de trasmisión y establecer la cobertura y confiabilidad que posee cada nodo sensor, se propone la arquitectura de los nodos sensores mostrada a continuacion:            
             </p>
@@ -83,8 +83,38 @@
             </p>
             <li>Sensores para la detección de gas (Metano, Monóxido Carbono).</li>
             <li>Módulo de comunicación por radio frecuencia.</li>
-        
-        
+            <li>Circuito de administración de energía con habilitación</li>
+            <li>Circuito para medir la carga de la batería.</li>
+            <p>En esta fase se implementó un circuito de regulación con habilitación para controlar el encendido de los sensores y con esto aumentar la vida útil y una autonomía mejorada de cada módulo, para satisfacer este requerimiento se seleccionó el circuito integrado LM2576 que permite habilitar el encendido de los sensores. Para la tarjeta de comunicación lora sx1278 se conecta al regulador fijo de la placa de procesamiento con el fin de habilitar una conexión
+               disponible y confiable a otros módulos, la placa diseñada se presenta en la figura 4
+            </p>
+            <img src="imagenes/placa_procesamiento_wsn.png" alt="">
+            <br>
+            <label for="">figura 4</label>
+            <p>Después de obtener los dispositivos y tener los circuitos impresos diseñados se procede a soldar los componentes obteniendo el prototipo entregable de nodo sensor mostrado en la figura 5            </p>
+            <img src="imagenes/nodo_sensor.png" alt="">
+            <br>
+            <label for="">figura 5</label>
+        </div>
+    </section>
+    <section>
+        <div class="dise_soft">
+            <h1>DISEÑO DE SOFTWARE</h1>
+            <P>La recolección de datos requiere de una unidad de procesamiento o CPU que se encarga de tomar la medición presente en el sensor y enviar a la estación base la información para ser mostrada en pantalla o almacenada; para esta labor se seleccionó el microcontrolador PIC18F26K80, con características de uso industrial, bajo consumo de potencia y que posee los periféricos necesarios para la aplicación, dentro de sus características cuenta con:
+            </P>
+            <LI>Un convertidor análogo a digital (ADC) de 12 bits con varios canales para convertir los valores de tensión de los sensores que miden la concentración de los gases.</LI>
+            <LI>Un transmisor receptor asíncrono universal (USART) para controlar el módulo AS32-TTL-100 con tecnología Lora enviar información.</LI>
+            <br>
+            <img src="imagenes/pic_ic.png" alt="">
+            <br>
+            <label for="">figura 6</label>
+            <p>
+                Estos circuitos integrados (IC) se programaron en MPLABX IDE haciendo uso del compilador XC8 para implementar el diagrama de flujo que se presenta en la Figura 25 para medir y trasmitir por radio frecuencia las concentraciones de los gases. Estas mediciones se adquieren haciendo uso del conversor análogo a digital (A/D) de 12 bits (incluido en el microcontrolador seleccionado) el cual se activa únicamente al momento del muestreo obteniendo la información de la variación de voltaje de los sensores que miden la concentración de los gases metano y monóxido de carbono junto al valor del voltaje de la batería, a cada medición se le aplica un filtro digital de respuesta infinita al impulso (IIR) pasa bajas con las siguientes especificaciones de diseño:  
+            </p>
+            <li>Frecuencia de corte de Fc = 1 Hz. </li>
+            <li>Frecuencia de muestreo de Fs = 10 Hz.</li>
+            <li>Orden 2.</li>
+            <li>Atenuacion banda de paso 1 dB</li>
         </div>
     </section>
 

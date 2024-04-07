@@ -108,6 +108,10 @@ img{
 .dise p{
     text-align: justify;
 }
+.dise_soft{
+    color: #FFFFFF;
+    text-align: justify;
+}
 .footer{
     padding: 50px 0;
     background: linear-gradient(
