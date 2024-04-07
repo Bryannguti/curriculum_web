@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto 1</title>
+    <title>Red de sensores</title>
     <link rel="stylesheet" href="style.css
     ">
 </head>
@@ -24,100 +24,14 @@
                 </ul>
             </nav>
         </div>
-        <div class="header-content" id="inicio">
-            <div class="header-txt">
-                <h1>Red de sensores WSN para mineria</h1>                
-            </div>
+        <br>
+        <embed src="documentos/TESIS_WSN_BGS.pdf" type="application/pdf" width="100%" height="1000px"/>
+        <br>
+        <br>
+        <div class="certificacion">
+            <h1>Certificacion IEEE articulo cientifico del proyecto</h1>
+            <img src="imagenes/certificate_iclant_IEEE.jpg" alt="">
         </div>
-        <div class="abstract" >
-            <p>Este trabajo presenta el diseño, implementación, parametrización y evaluación de un prototipo de trasmisor inalámbrico o nodo sensor, para la medición de gas metano (〖CH〗_4) y monóxido de carbono (CO) con sensores del proveedor Figaro, que permite la transmisión de estos niveles a través de una red WSN (Wireless Sensor Network), a partir de la información recolectada con nodos bajo el estándar LoraWPAN, en un sistema micro controlado basado en PIC. Estos se integran en circuitos impresos (PCB), usando tecnología de montaje superficial (SMD) buscando la optimización del espacio y diseño en factor de forma apropiado para el entorno confinado. El prototipo de red final se conecta con una interfaz grafica donde se controla una base de datos MySQL donde se almacena la información recibida, además se evalúa teórica y experimentalmente la potencia de recepción de estos nodos  obteniendo información de la potencia de recepción y cómo parámetro de desempeño se mide la tasa de error de paquetes (PER), las pruebas se realizaron en el pasillo de un edificio antiguo garantizando un entorno confinado para establecer una distancia máxima donde se puedan garantizar conectividad y confiabilidad con un bajo impacto en la PER. El sistema en general tiene como objetivo apoyar con el monitoreo y alerta en la gestión de riesgos de la minería subterránea de carbón.
-            </p>
-        </div>
-    </header>
-    <section>
-        <div class="list_content" id="contenido">
-            <h1>LISTA DE CONTENIDO</h1>
-            <li><a href="#resumen">resumen</a></li>
-            <li><a href="#contenido">contenido</a></li>
-            <li><a href="#dise">diseño</a></li>
-            <li><a href="#implement">implementación</a></li>
-            <li><a href="#parametrizacion">parametrizacion</a></li>
-            <li><a href="#evaluacion">evaluacion</a></li>
-            <li><a href="#concluciones">conclusiones</a></li>
-            <li><a href="#recomendaciones">recomendaciones</a></li>
-        </div>
-        <div class="dise" id="dise">
-            <h2>DISEÑO DEL HARDWARE</h2>
-            <p>
-                Para la realizar pruebas de trasmisión y establecer la cobertura y confiabilidad que posee cada nodo sensor, se propone la arquitectura de los nodos sensores mostrada a continuacion:            
-            </p>
-            <img src="imagenes/Aquitectura_hardware.png" alt="">
-           <br>
-            <label for="">figura 1</label>
-            <p>Partiendo de este punto se realizó el diseño y selección de dispositivos para la integración de un prototipo de nodo transmisor, empezando por el diseño del bloque de sensado; debido a la aplicación se comenzó con el tipo de sensores para la medición de gas metano y monóxido de carbono para obtener información sobre los dispositivos y los circuitos adicionales que estos requieren para funcionar bajo las condiciones de un entorno confinado, determinando la viabilidad en términos monetarios y funcionales.</p>
-            <p>Luego se escogió el microcontrolador para el bloque de procesamiento y se procede hacer un estudio de la potencia o consumo promedio que la interconexión de todos los bloques requiere debido a que se tiene como requerimiento de diseño que sea portable y esto hace que use baterias y el reto de estas aplicaciones es lograr estar en linea el mayor tiempo posible.           
-            y poder diseñar el bloque de potencia,  como el dispositivo tiene como finalidad ser portable requiere de baterías para dar una autonomía.
-            </p>  
-            <br>      
-            <p>Después de tener las características de consumo de potencia pasamos a la selección de los dispositivos del bloque de potencia, para que se regule la energía desde las baterías hacia cada uno de los bloques de sensado, procesamiento y trasmisión, en este punto se tuvo en cuenta el consumo de potencia de los sensores por lo que se estableció que el uso de estos es solo requerido por el microcontrolador cuando se necesite hacer una medición,  por lo que se planteó diseñar un prototipo entregable de dos fases en las que los bloques quedasen separados tanto el procesamiento con el sensado y trasmisión.
-                Los requerimientos para la primera fase son:  
-                <li>Circuito procesador de información </li>
-                <li>Acceso a los periféricos y/o pines del microcontrolador</li>
-                <li>Conexión a cargador y un banco de baterías</li>
-                <li>Circuito de administración de energía fijo (regulador)</li>
-            </p>
-            <p>En esta fase se realizó un estudio de los circuitos necesarios para que el microcontrolador tenga un correcto funcionamiento, el cual es alimentado a 5V con un par de baterías de 3.7 V de 1700 mA conectadas en serie al regulador de voltaje que tiene como función regular la tensión al nivel requerido por el microcontrolador, en la Figura 2 acontinuacion se muestra con detalle la placa simulada e implementada físicamente.</li>
-            </p> 
-            <img src="imagenes/placa_procesamiento_wsn.png" alt="">
-            <br>
-            <label for="">figura 2</label>
-            <p>
-                El regulador fijo LM1117 de la placa procesamiento es seleccionado por su capacidad de corriente y su bajo consumo de potencia en funcionamiento, y lo hace ideal para aplicaciones con baterías (T.Instruments), en la implementación de este circuito se requieren dos capacitores uno de entrada y uno de salida, el PCB diseñado se muestra en la figura 3
-            </p>
-            <img src="imagenes/regulador_lm317.png" alt="">
-            <br>
-            <label for="">figura 3</label>
-            <p>
-                Con este circuito de la Figura 3 podemos alimentar o energizar la placa de procesamiento, en donde está situado el microcontrolador.
-                La segunda fase consiste en el diseño de la placa de sensado y comunicación definiendo los siguientes requerimientos para su implementación:   
-            </p>
-            <li>Sensores para la detección de gas (Metano, Monóxido Carbono).</li>
-            <li>Módulo de comunicación por radio frecuencia.</li>
-            <li>Circuito de administración de energía con habilitación</li>
-            <li>Circuito para medir la carga de la batería.</li>
-            <p>En esta fase se implementó un circuito de regulación con habilitación para controlar el encendido de los sensores y con esto aumentar la vida útil y una autonomía mejorada de cada módulo, para satisfacer este requerimiento se seleccionó el circuito integrado LM2576 que permite habilitar el encendido de los sensores. Para la tarjeta de comunicación lora sx1278 se conecta al regulador fijo de la placa de procesamiento con el fin de habilitar una conexión
-               disponible y confiable a otros módulos, la placa diseñada se presenta en la figura 4
-            </p>
-            <img src="imagenes/placa_procesamiento_wsn.png" alt="">
-            <br>
-            <label for="">figura 4</label>
-            <p>Después de obtener los dispositivos y tener los circuitos impresos diseñados se procede a soldar los componentes obteniendo el prototipo entregable de nodo sensor mostrado en la figura 5            </p>
-            <img src="imagenes/nodo_sensor.png" alt="">
-            <br>
-            <label for="">figura 5</label>
-        </div>
-    </section>
-    <section>
-        <div class="dise_soft">
-            <h1>DISEÑO DE SOFTWARE</h1>
-            <P>La recolección de datos requiere de una unidad de procesamiento o CPU que se encarga de tomar la medición presente en el sensor y enviar a la estación base la información para ser mostrada en pantalla o almacenada; para esta labor se seleccionó el microcontrolador PIC18F26K80, con características de uso industrial, bajo consumo de potencia y que posee los periféricos necesarios para la aplicación, dentro de sus características cuenta con:
-            </P>
-            <LI>Un convertidor análogo a digital (ADC) de 12 bits con varios canales para convertir los valores de tensión de los sensores que miden la concentración de los gases.</LI>
-            <LI>Un transmisor receptor asíncrono universal (USART) para controlar el módulo AS32-TTL-100 con tecnología Lora enviar información.</LI>
-            <br>
-            <img src="imagenes/pic_ic.png" alt="">
-            <br>
-            <label for="">figura 6</label>
-            <p>
-                Estos circuitos integrados (IC) se programaron en MPLABX IDE haciendo uso del compilador XC8 para implementar el diagrama de flujo que se presenta en la Figura 25 para medir y trasmitir por radio frecuencia las concentraciones de los gases. Estas mediciones se adquieren haciendo uso del conversor análogo a digital (A/D) de 12 bits (incluido en el microcontrolador seleccionado) el cual se activa únicamente al momento del muestreo obteniendo la información de la variación de voltaje de los sensores que miden la concentración de los gases metano y monóxido de carbono junto al valor del voltaje de la batería, a cada medición se le aplica un filtro digital de respuesta infinita al impulso (IIR) pasa bajas con las siguientes especificaciones de diseño:  
-            </p>
-            <li>Frecuencia de corte de Fc = 1 Hz. </li>
-            <li>Frecuencia de muestreo de Fs = 10 Hz.</li>
-            <li>Orden 2.</li>
-            <li>Atenuacion banda de paso 1 dB</li>
-        </div>
-    </section>
-
     <section>
         <footer class="footer">
             <div class="footer-content" id="contacto">

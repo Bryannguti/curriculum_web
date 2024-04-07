@@ -132,7 +132,7 @@ img{
 
 @media (max-width:991px){
     .menu{
-        padding: 20px;
+        padding: 10px;
     }
     .menu label{
         display: initial;
@@ -142,7 +142,7 @@ img{
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #49bada;
+        background-color: #195c6e;
         display: none;
     }
     .menu .navbar ul li a:hover{
@@ -160,11 +160,12 @@ img{
         padding: 100px 30px 30px 30px;
     }
     .header-content{
+        margin: 10%;
         flex-direction: column;
         text-align: center;
     }
     .header-txt h1{
-        font-size: 70px;
+        font-size: 30px;
     }
     .about-container{
         padding: 30px;

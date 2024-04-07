@@ -66,51 +66,20 @@ img{
     display: flex;
     flex: 1;
 }
-.header-txt{
-    flex-basis: 100%;
-}
-.header-txt span{
-    font-size: 50px;
-    font-weight: 600;
-    color: #989cac;
-}
-
-.header-txt h1{
-    font-size: 100px;
-    color: #FFFF;
-    line-height: 1;
-    font-family: 'Bebas Neve',sans-serif;
-    margin: 10px 0 25px 0;
-    text-align: center;
-}
-.abstract {
-    color: #FFFFFF;
-    text-align: justify;
-    margin: 50px;
-}
-
-.list_content{
-    color: #FFFFFF;
-    
-}
-.list_content h1{
+.certificacion h1{
     color: #FFFFFF;
     text-align: center;
 }
-.list_content li a{
+.link h3{
     color: #FFFFFF;
-    text-align: left;
-
+    font-size: 18px;
+    margin-bottom: 10px;
 }
-.dise{
-    color: #FFFFFF;
-}
-.dise p{
-    text-align: justify;
-}
-.dise_soft{
-    color: #FFFFFF;
-    text-align: justify;
+.link a{
+    color: #a5a1a1;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 10px;
 }
 .footer{
     padding: 50px 0;

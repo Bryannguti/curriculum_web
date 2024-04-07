@@ -23,7 +23,7 @@ body{
 .logo{
     color: #49bada;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 00;
     text-transform: uppercase;
 }
 .menu .navbar ul li {
@@ -56,14 +56,16 @@ body{
     display: center;
     align-items: center;
     min-height: 70svh;
-    padding: 50px 0 0 0;
+    margin: 10%;
 }
 .header-content{
     display: flex;
     flex: 1;
+    margin: 10%;
 }
 .header-txt{
-    flex-basis: 100%;
+    margin: 5%;
+
 }
 .header-txt span{
     font-size: 50px;
@@ -122,6 +124,9 @@ body{
     margin-bottom: 20px;
     text-align: justify;
 }
+.portafolio-container{
+    margin: 10%;
+}
 .portafolio-container h2{
     text-align: center;
     font-size: 40px;
@@ -129,7 +134,9 @@ body{
     color: #ffffff;
     margin-bottom: 20px;
 }
-
+.about-container{
+    margin: 10%;
+}
 .about-txt{
     color: #bbbaba;
     font-size: 17px;
@@ -150,9 +157,7 @@ body{
     padding: 50px 0;
     text-align: center;
 }
-.portafolio-content{
-    margin-top: 70px;
-}
+
 .portafolio-1{
     display: flex;
     justify-content: space-between;
@@ -189,9 +194,13 @@ body{
 .portafolio-img img{
     width: 400px;
 }
+.portafolio-1 img {
+    width: 400px;
+}
 .skills-container{
-    padding: 100px 0 100px 0;
+    image-orientation: center;
     text-align: center;
+    margin: 10%;
 }
 .skills-container h2{
     color: #FFFFFF;
@@ -207,8 +216,26 @@ body{
 .skills-content img{
     width: 70px;
 }
+.links_certificados{
+    margin: 10%;
+}
+.links_certificados h1{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 50px;
+}
+.links_certificados h2{
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 20px;
+}
+.links_certificados a{
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 20px;
+}
 .footer{
-    padding: 50px 0;
+    margin: 10%;
     background: linear-gradient(
         90deg,
         rgba(74,42,193,1)0%,
@@ -224,13 +251,13 @@ body{
 .link h3{
     color: #FFFFFF;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 .link a{
     color: #c5c5c5;
     font-size: 17px;
     display: block;
-    margin-bottom: 10px;
+
 }
 
 @media (max-width:991px){
@@ -260,17 +287,16 @@ body{
     }
     .header{
         min-height: 0vh;
-        padding: 100px 30px 30px 30px;
     }
     .header-content{
         flex-direction: column;
         text-align: center;
     }
     .header-txt h1{
-        font-size: 70px;
+        font-size: 40px;
+        text-align: center;
     }
     .about-container{
-        padding: 30px;
         flex-direction: column;
         text-align: center;
     }
@@ -284,13 +310,10 @@ body{
     .butons a{
         margin: 0 0 10px 0;
     }
-    .portafolio-container{
-        padding: 30px;
-    }
+   
     .portafolio-1{
         flex-direction: column;
-        margin-bottom: 30px;
-    }
+         }
     .portafolio-txt{
         text-align: center;
         margin-bottom: 30px;
@@ -309,6 +332,15 @@ body{
         grid-template-columns: repeat(2,1fr);
         gap: 40px;
         padding: 0 100px;
+    }
+    .links_certificados h1{
+        font-size: 40px;   
+    }
+    .links_certificados h2{
+        font-size: 15px;   
+    }
+    .links_certificados a{
+        font-size: 12px;   
     }
     footer{
         padding: 30px;
