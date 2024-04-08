@@ -11,10 +11,6 @@ body{
     background-color: #101630;
 }
 
-img{
-    max-width: 100%;
-}
-
 .menu {
     position: absolute;
     top: 0;
@@ -90,27 +86,35 @@ img{
 }
 
 .list_content{
+    margin: 50px;
     color: #FFFFFF;
+    
 }
+.list_content h1{
+    text-align: center;
+}
+
+
 .list_content li a{
     color: #FFFFFF;
-
 }
 .dise{
     color: #FFFFFF;
+    margin: 50px;
 }
 .dise p{
     text-align: justify;
 }
-
+.dise h2{
+    text-align: center;
+}
 .footer{
-    padding: 50px 0;
     background: linear-gradient(
         90deg,
         rgba(74,42,193,1)0%,
         rgba(78,159,215,1)100% 
         );
-    
+    border-radius: 6dvh;
 }
 .footer-content{
     display: flex;
@@ -208,14 +212,5 @@ img{
         gap: 40px;
         padding: 0 100px;
     }
-    footer{
-        padding: 30px;
-    }
-    .footer-content{
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer h3 ul li a img{
-        font-size: xx-small;
-    }    
+   
 }

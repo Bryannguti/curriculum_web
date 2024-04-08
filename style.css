@@ -23,7 +23,7 @@ body{
 .logo{
     color: #49bada;
     font-size: 25px;
-    font-weight: 00;
+    font-weight: 800;
     text-transform: uppercase;
 }
 .menu .navbar ul li {
@@ -235,13 +235,12 @@ body{
     font-size: 20px;
 }
 .footer{
-    margin: 10%;
     background: linear-gradient(
         90deg,
         rgba(74,42,193,1)0%,
         rgba(78,159,215,1)100% 
         );
-    
+    border-radius: 6dvh;
 }
 .footer-content{
     display: flex;
@@ -251,7 +250,6 @@ body{
 .link h3{
     color: #FFFFFF;
     font-size: 18px;
-    margin: 10px;
 }
 .link a{
     color: #c5c5c5;
@@ -342,11 +340,5 @@ body{
     .links_certificados a{
         font-size: 12px;   
     }
-    footer{
-        padding: 30px;
-    }
-    .footer-content{
-        flex-direction: column;
-        text-align: center;
-    }
+
 }
